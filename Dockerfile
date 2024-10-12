@@ -75,7 +75,7 @@ ENV PROMPT_COMMAND='RET=$?; echo -n "[$RET] "'
 
 # Add clangd
 RUN wget https://github.com/clangd/clangd/releases/download/15.0.6/clangd-linux-15.0.6.zip && unzip clangd-linux-15.0.6.zip && cp ./clangd_15.0.6/bin/clangd /usr/local/bin && cp -rd ./clangd_15.0.6/lib/clang/ /usr/local/lib/ && rm -rf ./clangd_15.0.6 && rm clangd-linux-15.0.6.zip
-COPY ./.devcontainer/settings.json /root/.vscode-server/data/Machine/settings.json
+COPY ./settings.json /root/.vscode-server/data/Machine/settings.json
 
 # minilibx-linux source and install
 RUN git clone https://github.com/42Paris/minilibx-linux.git /usr/local/minilibx-linux
