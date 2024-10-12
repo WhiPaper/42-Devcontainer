@@ -2,6 +2,11 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/docker-existing-docker-compose
 // If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
 {
+	// Envbuilder config
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	
 	"name": "Docker Compose (Debugger)",
 
 	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
@@ -34,6 +39,24 @@
 		"llvm-vs-code-extensions.vscode-clangd",
 		"eamodio.gitlens"
 	],
+
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"ms-vscode.cpptools",
+				"mariusvanwijk-joppekoers.codam-norminette-3",
+				"secondfry.42header-long",
+				"damiankoper.gdb-debug",
+				"gurumukhi.selected-lines-count",
+				"ms-vscode.makefile-tools",
+				"mathematic.vscode-pdf",
+				"llvm-vs-code-extensions.vscode-clangd",
+				"eamodio.gitlens"
+			]
+		}
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	 "forwardPorts": [22],
