@@ -94,7 +94,7 @@ RUN rm /usr/bin/c++ && ln -s /usr/bin/g++ /usr/bin/c++
 
 # set working directory to /home/vscode/src
 WORKDIR /home/vscode
-COPY ./src/ ./src/
+COPY ../src/ ../src/
 WORKDIR /home/vscode/src
 
 # Export Display for XServer Forwarding
