@@ -87,7 +87,7 @@ RUN cd /usr/local/minilibx-linux/ && ./configure \
 
 # SSH Keys
 RUN mkdir -p /home/vscode/src && mkdir -p /root/.ssh
-COPY ./.ssh/ /root/.ssh/
+COPY ../.ssh/ /root/.ssh/
 
 # Remove c++ Symlink and replace with link to g++
 RUN rm /usr/bin/c++ && ln -s /usr/bin/g++ /usr/bin/c++
